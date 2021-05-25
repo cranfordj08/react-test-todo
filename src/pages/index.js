@@ -3,6 +3,7 @@ import Container from 'components/Container';
 import InlineLink from 'components/InlineLink';
 import { H1 } from 'components/H';
 import Button from 'components/Button';
+import Form from 'components/Form';
 
 const Index = () => {
   const [counter, setCounter] = useState(0);
@@ -10,7 +11,8 @@ const Index = () => {
   return (
     <main>
       <Container>
-        <H1>next.js starter</H1>
+        <H1>To Do List</H1>
+        <Form />
         <InlineLink href="https://elegantseagulls.com/posts">
           All Posts
         </InlineLink>
