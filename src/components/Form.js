@@ -12,7 +12,3 @@ const Form = (props) => {
 };
 
 export default Form;
-
-//   handleChange(event) {
-//     this.setState({ value: event.target.value });
-//   }
