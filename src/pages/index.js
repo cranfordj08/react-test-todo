@@ -5,14 +5,14 @@ import { H1 } from 'components/H';
 import Button from 'components/Button';
 import Form from 'components/Form';
 
-const Index = () => {
+const Index = (handleChange, inputValue, handleSubmit) => {
   const [counter, setCounter] = useState(0);
 
   return (
     <main>
       <Container>
         <H1>To Do List</H1>
-        <Form />
+        <Form handleChange={handleChange} inputValue={inputValue} handleSubmit={handleSubmit} />
         <InlineLink href="https://elegantseagulls.com/posts">
           All Posts
         </InlineLink>
