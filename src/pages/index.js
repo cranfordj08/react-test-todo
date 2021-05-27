@@ -1,34 +1,27 @@
 import React, { useState } from 'react';
 import Container from 'components/Container';
-import InlineLink from 'components/InlineLink';
+import Form from 'components/Form';
 import { H1 } from 'components/H';
-import Button from 'components/Button';
 
 const Index = () => {
-  const [counter, setCounter] = useState(0);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // eslint-disable-next-line no-alert
+    alert(inputValue);
+    setInputValue('');
+  };
 
   return (
     <main>
       <Container>
-        <H1>next.js starter</H1>
-        <InlineLink href="https://elegantseagulls.com/posts">
-          All Posts
-        </InlineLink>
-        <ul>
-          <li>
-            <InlineLink href="/posts/2">
-              post #2
-            </InlineLink>
-          </li>
-          <li>
-            <InlineLink href="/posts/10">
-              post #10
-            </InlineLink>
-          </li>
-        </ul>
-
-        <Button onClick={() => { setCounter(counter + 1); }}>increase &rarr;</Button> {counter}
-
+        <H1>To Do List</H1>
+        <Form handleChange={handleChange} inputValue={inputValue} handleSubmit={handleSubmit} />
       </Container>
     </main>
   );
