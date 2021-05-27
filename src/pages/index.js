@@ -7,13 +7,13 @@ const Index = () => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (event) => {
-    setInputValue(event.target.inputValue);
+    setInputValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     // eslint-disable-next-line no-console
     console.log(inputValue);
-    event.preventDefault();
   };
 
   return (
