@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'components/Container';
 import Form from 'components/Form';
 import { H1 } from 'components/H';
 
-const Index = ({ handleChange, inputValue }) => {
+const Index = () => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.inputValue);
+  };
 
   const handleSubmit = (event) => {
-    // eslint-disable-next-line no-alert
-    alert(inputValue);
+    // eslint-disable-next-line no-console
+    console.log(inputValue);
     event.preventDefault();
   };
 
