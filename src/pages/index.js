@@ -12,15 +12,16 @@ const Index = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log(inputValue);
+    // eslint-disable-next-line no-alert
+    alert(inputValue);
+    setInputValue('');
   };
 
   return (
     <main>
       <Container>
         <H1>To Do List</H1>
-        <Form handleChange={handleChange} inputValue={inputValue} onSubmit={handleSubmit} />
+        <Form handleChange={handleChange} inputValue={inputValue} handleSubmit={handleSubmit} />
       </Container>
     </main>
   );
